@@ -1,0 +1,13 @@
+.container {
+    weight: 80vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .card{
+        border: 3px solid black;
+        max-width: 60%;
+        max-height: auto;
+    }
+}
