@@ -8,6 +8,7 @@ const AddOption = ({
 
     const handleAddOption = ()=>{
         setOption(!option)
+        console.log("option", option)
     }
 
   return (

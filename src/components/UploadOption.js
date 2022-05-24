@@ -3,28 +3,31 @@ import "./uploadoption.scss";
 const UploadOption = (props) => {
   let image = [];
 
-    let akshay = URL.createObjectURL("C:\\fakepath\\linkedin.png")
+  // let akshay = URL.createObjectURL("C:\\fakepath\\linkedin.png")
 
   let handleUploadOption;
 
   useEffect(() => {
     handleUploadOption = (e) => {
-      console.log(e);
-    //   image.push(e.target[0].value);
-    //   console.log(image.length, "data");
+      image.push(e.target[0].value);
+      console.log("array", image);
+      console.log(image.length, "data");
     };
   }, [image]);
 
   return (
     <div className="container">
       <div className="card">
-        {image.length > 0 &&
-          image.map((ele) => {
-            <div className="image">
-              {/* <img src={ele} alt="image" /> */}
-              akdhdgydgweucgg COOL
-            </div>;
+        {
+          image?.map((ele, key) => {
+            return (
+              <div className="image" key={key}>
+                {/* <img src={ele} alt="image" /> */}
+                file Uploaded {ele}
+              </div>
+            );
           })}
+  
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -44,7 +47,6 @@ const UploadOption = (props) => {
           </button>
         </form>
       </div>
-      <img src="C:\\fakepath\\linkedin.png" alt="image"></img>
     </div>
   );
 };
