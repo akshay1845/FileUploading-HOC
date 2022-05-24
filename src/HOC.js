@@ -15,4 +15,4 @@ const HOC = (WrappedComponent) => {
 };
 
 export default HOC;
- 
+        

@@ -1,51 +1,50 @@
 import React, { useEffect, useState } from "react";
 import "./uploadoption.scss";
 const UploadOption = (props) => {
+  const [data, setData] = useState({});
   let image = [];
 
   // let akshay = URL.createObjectURL("C:\\fakepath\\linkedin.png")
 
+  const handleInputChange = (val) => {
+    setData(val.target.files[0]);
+  };
+
   let handleUploadOption;
-
-  useEffect(() => {
-    handleUploadOption = (e) => {
-      image.push(e.target[0].value);
-      console.log("array", image);
-      console.log(image.length, "data");
-    };
-  }, [image]);
-
+  handleUploadOption = () => {
+    image.push(data);
+    console.log("image", image);
+  };
   return (
     <div className="container">
-      <div className="card">
-        {
-          image?.map((ele, key) => {
-            return (
-              <div className="image" key={key}>
-                {/* <img src={ele} alt="image" /> */}
-                file Uploaded {ele}
-              </div>
-            );
-          })}
-  
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleUploadOption(e);
-          }}
-        >
-          <label htmlFor="myfile">
-            <h2>Add Your File Here</h2>
-          </label>
-          <br />
-          <br />
-          <input type="file" id="myfile" />
-          <br />
-          <br />
-          <button type="submit" id="upload">
-            Upload
-          </button>
-        </form>
+      <div className="box">
+        <div className="card">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleUploadOption();
+            }}
+          >
+            <label htmlFor="myfile">
+              <h2>Add Your File Here</h2>
+            </label>
+            <br />
+            <br />
+            <input
+              type="file"
+              id="myfile"
+              onChange={(val) => {
+                val.preventDefault();
+                handleInputChange(val);
+              }}
+            />
+            <br />
+            <br />
+            <button type="submit" id="upload">
+              Upload
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

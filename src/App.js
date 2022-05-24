@@ -5,7 +5,7 @@ import UploadOption from './components/UploadOption';
 function App() {
   return (
     <div className="App">
-      {/* <AddOption/> */}
+      <AddOption/>
       <UploadOption />
     </div>
   );
