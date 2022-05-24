@@ -1,0 +1,16 @@
+.addOptionContainer{
+    .customButton{
+        border-radius: 5px;
+        background-color: rgb(235, 170, 235);
+        color:blue;
+
+        &:hover{
+            background-color: purple;
+            color:white;
+        }
+
+        .spanTag{
+            font: 250;
+        }
+    }
+}

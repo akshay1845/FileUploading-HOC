@@ -6,7 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-y : hidden;  
+    overflow: hidden;
+    // overflow-y : hidden;     
 
     .box{
         border: 1px solid green;
