@@ -1,16 +1,32 @@
-.addOptionContainer{
-    .customButton{
-        border-radius: 5px;
-        background-color: rgb(235, 170, 235);
-        color:blue;
+.container {
+  weight: 80vw;
+  height: 100%;
+  // margin-top:5%;
+//   padding: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-        &:hover{
-            background-color: purple;
-            color:white;
-        }
+  .box {
+    border: 1px solid green;
+    max-width: 50%;
+    max-height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
 
-        .spanTag{
-            font: 250;
-        }
+    .customButton {
+      border-radius: 5px;
+      background-color: rgb(235, 170, 235);
+      color: blue;
+
+      &:hover {
+        background-color: purple;
+        color: white;
+      }
+
+      .spanTag {
+        font: 250;
+      }
     }
+  }
 }

@@ -17,7 +17,7 @@ const UploadOption = (props) => {
   };
   return (
     <div className="container">
-      <div className="box">
+
         <div className="card">
           <form
             onSubmit={(e) => {
@@ -45,7 +45,6 @@ const UploadOption = (props) => {
             </button>
           </form>
         </div>
-      </div>
     </div>
   );
 };

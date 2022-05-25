@@ -9,13 +9,6 @@
     overflow: hidden;
     // overflow-y : hidden;     
 
-    .box{
-        border: 1px solid green;
-        max-width:40%;
-        max-height:fit-content;
-        display: flex;
-        flex-wrap: wrap;
-
         .card{
             border: 3px solid black;
             max-width: fit-content;
@@ -28,7 +21,6 @@
         border: 3px solid green;
         margin: 10px;
     }
-}
 
 
 
